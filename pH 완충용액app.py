@@ -58,7 +58,7 @@ if start_button:
             valve_status = f"🔴 중화제(Acid) 밸브 개방! 투입률: {min(100, int(excess*50))}%"
             status_color = "error"
             status_text = "⚠️ [경고] pH 상한선 초과! 피드백 제어 스케일 가동 중."
-        elif control_enabled and raw_ph < target_min and t > 120: 
+        elif control_enabled and raw_ph < target_min and t > 0: 
             # 초기 산성 상태를 지나 공정 중 pH가 너무 떨어질 때의 제어 (예시)
             controlled_ph = target_min
             valve_status = "🔵 중화제(Base) 밸브 개방!"

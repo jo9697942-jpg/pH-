@@ -84,16 +84,16 @@ if start_button:
 
         # 그래프 그리기
         fig, ax = plt.subplots(figsize=(8, 4.5))
-        ax.plot(current_times, current_phs, 'r--', label="Raw Data (No Control)", alpha=0.5)
-        ax.plot(current_times, controlled_phs, 'b-', linewidth=2, label="Controlled pH (Feedback Loop)")
+        ax.plot(current_times, current_phs, 'r--', label="기존 데이터 (제어 없음)", alpha=0.5)
+        ax.plot(current_times, controlled_phs, 'b-', linewidth=2, label="제어 후 pH (피드백 제어 결과)")
         
         # 최적 범위 가이드라인
-        ax.axhline(target_max, color='green', linestyle=':', label="Target pH Max")
-        ax.axhline(target_min, color='green', linestyle=':', label="Target pH Min")
+        ax.axhline(target_max, color='green', linestyle=':', label="설정한 pH 상한선")
+        ax.axhline(target_min, color='green', linestyle=':', label="설정한 pH 하한선")
         
-        ax.set_xlabel("Time (s)")
-        ax.set_ylabel("pH")
-        ax.set_title(f"Bioreactor pH Dynamic Response (Time: {t}s)")
+        ax.set_xlabel("시간 (초)")
+        ax.set_ylabel("pH 지수")
+        ax.set_title(f"바이오리액터 pH 동적 제어 그래프 (현재 시간: {t}초)")
         ax.legend(loc="upper left")
         ax.grid(True, alpha=0.3)
         

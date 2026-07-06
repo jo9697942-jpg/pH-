@@ -97,7 +97,7 @@ if start_button:
         ax.legend(loc="upper left")
         ax.grid(True, alpha=0.3)
         ax.set_ylim(0, 14)       # Y축 눈금을 원본처럼 0~14로 고정
-        ax.set_xlim(-5, 165)  
+        ax.set_xlim(0, 165)  
         
         chart_holder.pyplot(fig)
         plt.close()
